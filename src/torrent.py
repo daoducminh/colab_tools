@@ -1,7 +1,7 @@
 import argparse
 import libtorrent as lt
 import time
-from sys.stdout import flush
+import sys
 from pathlib import Path
 import shutil
 
@@ -49,7 +49,7 @@ def download(magnet_link, save_path='', verbose=False):
             print('\r%.2f%% complete (down: %.1f kB/s up: %.1f kB/s peers: %d) %s' % (
                 s.progress * 100, s.download_rate / 1000, s.upload_rate / 1000,
                 s.num_peers, s.state), end=' ')
-            flush()
+            sys.stdout.flush()
         time.sleep(1)
     if verbose:
         print(f'Downloaded {x.name()}')
