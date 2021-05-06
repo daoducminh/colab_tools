@@ -1,7 +1,7 @@
 import argparse
 import libtorrent as lt
 import time
-from sys.stdout import flush()
+from sys.stdout import flush
 from pathlib import Path
 import shutil
 
