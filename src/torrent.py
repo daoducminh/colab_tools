@@ -13,7 +13,6 @@ def parse_arguments():
     parser.add_argument(
         'magnet_link',
         type=str,
-        required=True,
         help='Torrent magnet link'
     )
     parser.add_argument(
