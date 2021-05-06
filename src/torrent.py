@@ -3,6 +3,7 @@ import libtorrent as lt
 import time
 import sys
 from pathlib import Path
+import shutil
 
 MOVE_TORRENT = 'mv -f {0} {1}'
 
@@ -63,7 +64,8 @@ if __name__ == '__main__':
         if dest:
             src = Path(args.save_path, torrent_name)
             dst = Path(args.destination)
-            src.rename(dst)
+            shutil.copy(src, dst)
+            shutil.rmtree(src, ignore_errors=True)
             if args.verbose:
                 print(f'Downloaded torrent has been moved to: {dst}')
     else:
