@@ -19,7 +19,7 @@ def parse_arguments():
     parser.add_argument(
         '-s',
         '--save-path',
-        default=''
+        default='',
         type=str,
         help='Save download path'
     )
