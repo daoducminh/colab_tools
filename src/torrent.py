@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 from os import system
 
-MOVE_TORRENT = 'mv -f {0} {1}'
+MOVE_TORRENT = 'mv -f "{0}" {1}'
 
 
 def parse_arguments():
