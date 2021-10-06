@@ -4,6 +4,7 @@ import time
 import sys
 from pathlib import Path
 from os import system
+from urllib.parse import quote
 
 MOVE_TORRENT = 'mv -f "{0}" {1}'
 
@@ -57,7 +58,7 @@ def download(magnet_link, save_path='', verbose=False):
 
 if __name__ == '__main__':
     args = parse_arguments()
-    link = args.magnet_link
+    link = quote(args.magnet_link)
     if link:
         torrent_name = download(link, args.save_path, args.verbose)
         dest = args.destination
