@@ -30,7 +30,7 @@ def parse_arguments():
         help='Move downloaded torrent to destination'
     )
     parser.add_argument(
-        '-v',
+        '-V',
         '--verbose',
         help='Show verbosity',
         action='store_true'
